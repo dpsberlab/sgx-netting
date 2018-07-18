@@ -65,7 +65,7 @@ $ cd sgx-netting-build/bin
 $ ./app
 ~~~
 
-# Ubuntu 16.04 the 'make everything work'
+# Ubuntu 18.04 LTS (Bionic) the 'make everything work'
 ~~~
 sudo apt-get install build-essential python
 git clone git@github.com:dpsberlab/linux-sgx.git
