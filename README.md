@@ -67,7 +67,7 @@ $ ./app
 
 # Ubuntu 18.04 LTS (Bionic) the 'make everything work'
 ~~~
-sudo apt-get install build-essential python
+sudo apt-get install build-essential python cmake
 git clone git@github.com:dpsberlab/linux-sgx.git
 cd linux-sgx
 ./download_prebuilt.sh
@@ -76,7 +76,6 @@ cd linux/installer/bin
 ./sgx_linux_x64_sdk_${version}.bin  # choose install directory - /opt/intel
 . /opt/intel/sgxsdk/environment # source the sgxsdk environment into the shell
 git clone git@github.com:olegabu/sgx-netting.git
-pushd sgx-netting && git checkout uglydev && popd
 mkdir sgx-netting-build
 cd sgx-netting-build
 cmake ../sgx-netting -DSGX_MODE=SIM
