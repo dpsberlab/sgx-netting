@@ -68,8 +68,12 @@ $ ./app
 # Ubuntu 16.04 the 'make everything work'
 ~~~
 sudo apt-get install build-essential python
-wget https://download.01.org/intel-sgx/linux-1.9/sgx_linux_ubuntu16.04.1_x64_sdk_1.9.100.39124.bin
-sh sgx_linux_ubuntu16.04.1_x64_sdk_1.9.100.39124.bin # choose install directory - /opt/intel
+git clone git@github.com:dpsberlab/linux-sgx.git
+cd linux-sgx
+./download_prebuilt.sh
+make && make sdk_install_pkg
+cd linux/installer/bin
+./sgx_linux_x64_sdk_${version}.bin  # choose install directory - /opt/intel
 . /opt/intel/sgxsdk/environment # source the sgxsdk environment into the shell
 git clone git@github.com:olegabu/sgx-netting.git
 pushd sgx-netting && git checkout uglydev && popd
